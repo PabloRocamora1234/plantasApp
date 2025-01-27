@@ -1,0 +1,13 @@
+.contenedor {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  
+    app-formulario {
+      flex: 1;
+    }
+  
+    app-lista-plantas {
+      flex: 2;
+    }
+  }  

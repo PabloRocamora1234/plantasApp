@@ -1,0 +1,16 @@
+<div class="formulario">
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" [(ngModel)]="nombre" type="text" placeholder="Nombre de la planta" />
+
+  <div class="radio-group">
+    <label>
+      <input type="radio" name="tipo" [(ngModel)]="tipo" value="Arbusto" /> Arbusto
+    </label>
+    <label>
+      <input type="radio" name="tipo" [(ngModel)]="tipo" value="Árbol" /> Árbol
+    </label>
+  </div>
+
+  <button (click)="guardarPlanta()">Guardar</button>
+  <button (click)="limpiarFormulario()">Borrar</button>
+</div>

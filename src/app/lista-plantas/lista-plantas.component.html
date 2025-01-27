@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let planta of plantas; let i = index" [ngClass]="{'favorito': planta.favorito}">
+    {{ planta.nombre }} - {{ planta.tipo }}
+    <button (click)="eliminarPlanta(i)">Eliminar</button>
+    <button (click)="marcarFavorito(i)">
+      {{ planta.favorito ? 'Quitar de favoritos' : 'Marcar como favorito' }}
+    </button>
+  </li>
+</ul>
