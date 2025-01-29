@@ -32,30 +32,70 @@
   .checkbox-group, .radio-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
   }
 
-  .radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  .radio-group .radio-img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    background-size: cover;
+    background-position: center;
   }
 
-  button {
-    align-self: center;
-    padding: 12px 25px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100px;
-    text-align: center;
+  .radio-group .radio-img.arbusto {
+    background-image: url('arbusto.jpg');
+  }
 
-    &:hover {
-      background-color: #218838;
+  .radio-group .radio-img.arbol {
+    background-image: url('arbol.jpg');
+  }
+
+  .radio-group .radio-img:hover {
+    border-color: #007bff;
+  }
+
+  .radio-group .radio-img.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+    transform: scale(1.1);
+  }
+
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &.boton-rojo {
+        background-color: red;
+        color: white;
+
+        &:hover {
+          background-color: darkred;
+        }
+      }
+
+      &.boton-verde {
+        background-color: green;
+        color: white;
+
+        &:hover {
+          background-color: darkgreen;
+        }
+      }
     }
   }
 }

@@ -5,8 +5,8 @@ import { Planta } from '../models/planta';
 
 @Component({
   selector: 'app-formulario',
-  standalone: true, // Marca este componente como independiente
-  imports: [CommonModule, FormsModule], // Importa los módulos necesarios
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.scss'],
 })

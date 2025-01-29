@@ -3,14 +3,12 @@
   <input id="nombre" [(ngModel)]="nombre" type="text" placeholder="Nombre de la planta" />
 
   <div class="radio-group">
-    <label>
-      <input type="radio" name="tipo" [(ngModel)]="tipo" value="Arbusto" /> Arbusto
-    </label>
-    <label>
-      <input type="radio" name="tipo" [(ngModel)]="tipo" value="Árbol" /> Árbol
-    </label>
+    <div class="radio-img arbusto" [ngClass]="{'selected': tipo === 'Arbusto'}" (click)="tipo='Arbusto'"></div>
+    <div class="radio-img arbol" [ngClass]="{'selected': tipo === 'Árbol'}" (click)="tipo='Árbol'"></div>
   </div>
 
-  <button (click)="guardarPlanta()">Guardar</button>
-  <button (click)="limpiarFormulario()">Borrar</button>
+  <div class="botones">
+    <button class="boton-verde" (click)="guardarPlanta()">✔</button>
+    <button class="boton-rojo" (click)="limpiarFormulario()">✖</button>
+  </div>
 </div>
